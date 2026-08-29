@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="90" viewBox="0 0 360 90">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.5" stop-color="#0b2034"/>
+      <stop offset="1" stop-color="#050b13"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0077ff"/>
+      <stop offset="0.5" stop-color="#00e5ff"/>
+      <stop offset="1" stop-color="#0077ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur1"/>
+      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M20 45 L43 20 H72 L88 31 H272 L288 20 H317 L340 45 L317 70 H288 L272 59 H88 L72 70 H43 Z"
+        fill="#03101a" stroke="url(#edge)" stroke-width="3" filter="url(#glow)"/>
+  <path d="M76 27 H284 L302 45 L284 63 H76 L58 45 Z"
+        fill="url(#panel)" stroke="#00d9ff" stroke-width="2"/>
+  <path d="M42 45 L57 29 H72 L58 45 L72 61 H57 Z" fill="#008cff"/>
+  <path d="M318 45 L303 29 H288 L302 45 L288 61 H303 Z" fill="#008cff"/>
+  <path d="M88 33 H272" stroke="#0aeaff" stroke-width="1.5" opacity=".85"/>
+  <path d="M88 57 H272" stroke="#006dff" stroke-width="1.5" opacity=".75"/>
+  <text x="180" y="52" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="28" font-weight="900" font-style="italic" letter-spacing="2"
+        fill="#eafcff" stroke="#4ccfff" stroke-width=".7"
+        paint-order="stroke" filter="url(#textGlow)">TRUEBLUE</text>
+</svg>
