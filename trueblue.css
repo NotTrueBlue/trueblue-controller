@@ -1,264 +1,185 @@
 /* =========================================
-   TRUEBLUE V3 - GamePad Viewer Beta
-   Host: GitHub Pages
-   Theme: Dark / Neon Blue / Rocket League
+   TRUEBLUE V3.1
+   GamePad Viewer Beta / PS4
+   CLEAN NEON BASE
    ========================================= */
 
-:root{
-  --tb-blue: #00cfff;
-  --tb-blue2: #009dff;
-  --tb-blue3: #5fe8ff;
-  --tb-dark: #04101b;
-  --tb-dark2: #071a2b;
-  --tb-white: #e9fbff;
+/* Cały pad - bez zmiany rozmiaru i bez pseudo-elementów */
+.edit {
+    filter:
+        contrast(1.08)
+        saturate(1.08)
+        drop-shadow(0 0 5px rgba(0, 195, 255, 0.45))
+        drop-shadow(0 0 12px rgba(0, 115, 255, 0.22))
+        !important;
 }
 
-/* główny wrapper kontrolera */
-.edit{
-  position: relative !important;
-  transform-origin: center center;
-  filter:
-    brightness(0.78)
-    contrast(1.18)
-    saturate(1.22)
-    drop-shadow(0 0 10px rgba(0, 207, 255, .45))
-    drop-shadow(0 0 24px rgba(0, 120, 255, .35))
-    drop-shadow(0 0 44px rgba(0, 80, 255, .20)) !important;
+/* ===========================
+   FACE BUTTONS
+   =========================== */
+
+.edit .button {
+    filter:
+        brightness(1.12)
+        saturate(1.15)
+        drop-shadow(0 0 4px rgba(0, 200, 255, 0.35))
+        !important;
+
+    transition:
+        filter 0.07s ease,
+        transform 0.07s ease;
 }
 
-/* lekki badge TRUEBLUE */
-.edit::after{
-  content: "TRUEBLUE";
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  padding: 6px 14px;
-  border: 1px solid rgba(95, 232, 255, .55);
-  border-radius: 999px;
-  background:
-    linear-gradient(180deg,
-      rgba(0, 30, 55, .92) 0%,
-      rgba(0, 14, 34, .96) 100%);
-  color: var(--tb-white);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1.4px;
-  text-shadow:
-    0 0 6px rgba(95, 232, 255, .85),
-    0 0 14px rgba(0, 157, 255, .45);
-  box-shadow:
-    inset 0 0 12px rgba(0, 157, 255, .18),
-    0 0 10px rgba(0, 207, 255, .25),
-    0 0 20px rgba(0, 105, 255, .15);
-  pointer-events: none;
-  z-index: 50;
+.edit .button.pressed {
+    filter:
+        brightness(1.5)
+        saturate(1.3)
+        drop-shadow(0 0 5px rgba(255,255,255,0.85))
+        drop-shadow(0 0 11px rgba(0,225,255,0.9))
+        drop-shadow(0 0 18px rgba(0,105,255,0.55))
+        !important;
+
+    transform: scale(0.96);
 }
 
-/* =========================================
-   BAZOWE ELEMENTY
-   ========================================= */
-
-.edit .button,
-.edit .face,
-.edit .stick,
-.edit .trigger,
-.edit .bumper,
-.edit .touchpad,
-.edit .back,
-.edit .start,
-.edit .meta{
-  transition:
-    filter .08s ease,
-    transform .08s ease,
-    opacity .08s ease;
-}
-
-/* =========================================
-   TRIGGERY / BUMPERY
-   ========================================= */
-
-.edit .trigger{
-  filter:
-    brightness(1.05)
-    saturate(1.25)
-    drop-shadow(0 0 8px rgba(0, 225, 255, .55))
-    drop-shadow(0 0 18px rgba(0, 125, 255, .28)) !important;
-}
-
-.edit .bumper{
-  filter:
-    brightness(1.02)
-    saturate(1.18)
-    drop-shadow(0 0 6px rgba(0, 215, 255, .48))
-    drop-shadow(0 0 12px rgba(0, 105, 255, .22)) !important;
-}
-
-/* =========================================
-   PRZYCISKI FACE
-   ========================================= */
-
-.edit .button{
-  filter:
-    brightness(1.08)
-    contrast(1.12)
-    saturate(1.2)
-    drop-shadow(0 0 4px rgba(0, 210, 255, .35))
-    drop-shadow(0 0 10px rgba(0, 120, 255, .18)) !important;
-}
-
-/* mocniejsze świecenie gdy wciśnięte */
-.edit .button.pressed{
-  filter:
-    brightness(1.55)
-    contrast(1.18)
-    saturate(1.35)
-    drop-shadow(0 0 8px rgba(255, 255, 255, .92))
-    drop-shadow(0 0 16px rgba(0, 225, 255, .95))
-    drop-shadow(0 0 28px rgba(0, 110, 255, .55)) !important;
-  transform: scale(0.96);
-}
-
-/* =========================================
+/* ===========================
    DPAD
-   ========================================= */
+   =========================== */
 
-.edit .face{
-  filter:
-    brightness(0.96)
-    contrast(1.15)
-    saturate(1.15)
-    drop-shadow(0 0 6px rgba(0, 200, 255, .30)) !important;
+.edit .face {
+    filter:
+        brightness(1.08)
+        drop-shadow(0 0 3px rgba(0,190,255,0.25))
+        !important;
 }
 
-.edit .face.pressed{
-  filter:
-    brightness(1.35)
-    saturate(1.28)
-    drop-shadow(0 0 8px rgba(0, 225, 255, .80))
-    drop-shadow(0 0 16px rgba(0, 110, 255, .40)) !important;
-  transform: scale(0.98);
+.edit .face.pressed {
+    filter:
+        brightness(1.35)
+        drop-shadow(0 0 7px rgba(0,225,255,0.8))
+        drop-shadow(0 0 13px rgba(0,110,255,0.45))
+        !important;
 }
 
-/* =========================================
+/* ===========================
    ANALOGI
-   ========================================= */
+   =========================== */
 
-.edit .stick{
-  filter:
-    brightness(1.02)
-    contrast(1.18)
-    saturate(1.22)
-    drop-shadow(0 0 8px rgba(0, 215, 255, .40))
-    drop-shadow(0 0 18px rgba(0, 105, 255, .22)) !important;
+.edit .stick {
+    filter:
+        brightness(1.05)
+        contrast(1.08)
+        drop-shadow(0 0 4px rgba(0,205,255,0.32))
+        !important;
 }
 
-.edit .stick.pressed{
-  filter:
-    brightness(1.45)
-    contrast(1.2)
-    saturate(1.3)
-    drop-shadow(0 0 8px rgba(255,255,255,.75))
-    drop-shadow(0 0 16px rgba(0,225,255,.95))
-    drop-shadow(0 0 28px rgba(0,110,255,.55)) !important;
+.edit .stick.pressed {
+    filter:
+        brightness(1.4)
+        drop-shadow(0 0 7px rgba(0,230,255,0.85))
+        drop-shadow(0 0 15px rgba(0,110,255,0.55))
+        !important;
 }
 
-/* =========================================
+/* ===========================
+   L2 / R2
+   =========================== */
+
+.edit .trigger {
+    filter:
+        brightness(1.12)
+        saturate(1.12)
+        drop-shadow(0 0 4px rgba(0,205,255,0.38))
+        !important;
+}
+
+/* ===========================
+   L1 / R1
+   =========================== */
+
+.edit .bumper {
+    filter:
+        brightness(1.08)
+        drop-shadow(0 0 3px rgba(0,195,255,0.28))
+        !important;
+}
+
+/* ===========================
    TOUCHPAD
-   ========================================= */
+   =========================== */
 
-.edit .touchpad{
-  filter:
-    brightness(0.82)
-    contrast(1.28)
-    saturate(1.18)
-    drop-shadow(0 0 8px rgba(0, 205, 255, .25))
-    drop-shadow(0 0 18px rgba(0, 105, 255, .16)) !important;
+.edit .touchpad {
+    filter:
+        brightness(1.03)
+        contrast(1.12)
+        drop-shadow(0 0 4px rgba(0,190,255,0.22))
+        !important;
 }
 
-.edit .touchpad.pressed{
-  filter:
-    brightness(1.15)
-    contrast(1.35)
-    saturate(1.28)
-    drop-shadow(0 0 8px rgba(0, 225, 255, .85))
-    drop-shadow(0 0 18px rgba(0, 120, 255, .45)) !important;
+.edit .touchpad.pressed {
+    filter:
+        brightness(1.28)
+        drop-shadow(0 0 9px rgba(0,225,255,0.75))
+        !important;
 }
 
-/* =========================================
-   SHARE / OPTIONS / PS BUTTON
-   ========================================= */
+/* ===========================
+   SHARE / OPTIONS
+   =========================== */
 
 .edit .back,
-.edit .start{
-  filter:
-    brightness(1.05)
-    saturate(1.18)
-    drop-shadow(0 0 5px rgba(0, 205, 255, .40)) !important;
+.edit .start {
+    filter:
+        brightness(1.1)
+        drop-shadow(0 0 3px rgba(0,190,255,0.3))
+        !important;
 }
 
 .edit .back.pressed,
-.edit .start.pressed{
-  filter:
-    brightness(1.45)
-    drop-shadow(0 0 8px rgba(255,255,255,.7))
-    drop-shadow(0 0 14px rgba(0,225,255,.9)) !important;
+.edit .start.pressed {
+    filter:
+        brightness(1.4)
+        drop-shadow(0 0 8px rgba(0,225,255,0.8))
+        !important;
 }
 
-.edit .meta{
-  filter:
-    brightness(1.1)
-    saturate(1.22)
-    drop-shadow(0 0 6px rgba(0, 210, 255, .45))
-    drop-shadow(0 0 14px rgba(0, 100, 255, .25)) !important;
+/* ===========================
+   PS BUTTON
+   =========================== */
+
+.edit .meta {
+    filter:
+        brightness(1.1)
+        drop-shadow(0 0 4px rgba(0,200,255,0.32))
+        !important;
 }
 
-.edit .meta.pressed{
-  filter:
-    brightness(1.5)
-    drop-shadow(0 0 8px rgba(255,255,255,.8))
-    drop-shadow(0 0 18px rgba(0,225,255,.95))
-    drop-shadow(0 0 30px rgba(0,110,255,.50)) !important;
+.edit .meta.pressed {
+    filter:
+        brightness(1.45)
+        drop-shadow(0 0 8px rgba(0,225,255,0.85))
+        drop-shadow(0 0 14px rgba(0,110,255,0.5))
+        !important;
 }
 
-/* =========================================
-   GLOBAL PRESSED FEEL
-   ========================================= */
+/* ===========================
+   INPUT PULSE
+   =========================== */
 
-.edit .pressed{
-  animation: tbPulse .16s ease-out;
+.edit .pressed {
+    animation: trueblue-input 0.14s ease-out;
 }
 
-@keyframes tbPulse{
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(.97);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
+@keyframes trueblue-input {
+    0% {
+        opacity: 1;
+    }
 
-/* =========================================
-   DODATKOWY CYBER LOOK
-   ========================================= */
+    50% {
+        opacity: 0.88;
+    }
 
-/* lekka poświata na całym padzie, bardziej „pazur” */
-.edit:hover{
-  filter:
-    brightness(0.82)
-    contrast(1.22)
-    saturate(1.28)
-    drop-shadow(0 0 12px rgba(0, 215, 255, .55))
-    drop-shadow(0 0 28px rgba(0, 120, 255, .40))
-    drop-shadow(0 0 50px rgba(0, 75, 255, .22)) !important;
-}
-
-/* bezpieczne wyłączenie zaznaczeń */
-.edit,
-.edit *{
-  user-select: none;
+    100% {
+        opacity: 1;
+    }
 }
