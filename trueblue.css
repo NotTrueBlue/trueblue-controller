@@ -20,96 +20,46 @@
 
 
 /* =========================
-   ANALOGI - TRUEBLUE CUSTOM SVG
+   ANALOGI - CUSTOM SVG
    ========================= */
 
 .controller.ds4 .stick {
   width: 94px !important;
   height: 94px !important;
 
-  /* nasz sprite 286x94 */
-  -webkit-mask-image:
-    url("https://nottrueblue.github.io/trueblue-controller/stick.svg") !important;
-  mask-image:
-    url("https://nottrueblue.github.io/trueblue-controller/stick.svg") !important;
-
-  -webkit-mask-repeat: no-repeat !important;
-  mask-repeat: no-repeat !important;
-
-  -webkit-mask-size: 286px 94px !important;
-  mask-size: 286px 94px !important;
-
-  /* pierwszy element sprite = normalny analog */
-  -webkit-mask-position: 0 0 !important;
-  mask-position: 0 0 !important;
-
-  /* gradient analogów */
   background:
-    radial-gradient(
-      circle at 38% 32%,
-      #29445f 0%,
-      #172b3e 22%,
-      #0b1928 48%,
-      #007eb8 72%,
-      #00ddff 88%,
-      #006eff 100%
-    ) !important;
+    url("https://nottrueblue.github.io/trueblue-controller/stick.svg")
+    no-repeat !important;
+
+  background-size: 286px 94px !important;
+  background-position: 0 0 !important;
 
   filter:
-    drop-shadow(0 0 4px rgba(0, 225, 255, 0.65))
-    drop-shadow(0 0 10px rgba(0, 110, 255, 0.35)) !important;
+    brightness(1.15)
+    contrast(1.12)
+    drop-shadow(0 0 5px rgba(0, 225, 255, 0.55))
+    drop-shadow(0 0 10px rgba(0, 110, 255, 0.30)) !important;
 }
 
-
-/* =========================
-   L3 WCIŚNIĘTY
-   drugi element sprite
-   ========================= */
-
+/* L3 */
 .controller.ds4 .stick.left.pressed {
-  -webkit-mask-position: -96px 0 !important;
-  mask-position: -96px 0 !important;
-
-  background:
-    radial-gradient(
-      circle at 38% 32%,
-      #bafaff 0%,
-      #4ceaff 25%,
-      #00bfff 55%,
-      #0072ff 100%
-    ) !important;
+  background-position: -96px 0 !important;
 
   filter:
-    drop-shadow(0 0 6px rgba(255,255,255,.7))
-    drop-shadow(0 0 12px rgba(0,225,255,.95))
-    drop-shadow(0 0 20px rgba(0,100,255,.55)) !important;
+    brightness(1.25)
+    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 14px rgba(0, 110, 255, 0.45)) !important;
 }
 
-
-/* =========================
-   R3 WCIŚNIĘTY
-   trzeci element sprite
-   ========================= */
-
+/* R3 */
 .controller.ds4 .stick.right.pressed {
-  -webkit-mask-position: -192px 0 !important;
-  mask-position: -192px 0 !important;
-
-  background:
-    radial-gradient(
-      circle at 38% 32%,
-      #bafaff 0%,
-      #4ceaff 25%,
-      #00bfff 55%,
-      #0072ff 100%
-    ) !important;
+  background-position: -192px 0 !important;
 
   filter:
-    drop-shadow(0 0 6px rgba(255,255,255,.7))
-    drop-shadow(0 0 12px rgba(0,225,255,.95))
-    drop-shadow(0 0 20px rgba(0,100,255,.55)) !important;
+    brightness(1.25)
+    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 14px rgba(0, 110, 255, 0.45)) !important;
 }
-
 
 /* =========================
    FACE BUTTONS - bardziej czytelne
