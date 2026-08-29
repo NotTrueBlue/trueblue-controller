@@ -20,45 +20,45 @@
 
 
 /* =========================
-   ANALOGI - CUSTOM SVG
+   ANALOGI - TRUEBLUE CUSTOM SVG
    ========================= */
 
 .controller.ds4 .stick {
   width: 94px !important;
   height: 94px !important;
 
-  background:
-    url("https://nottrueblue.github.io/trueblue-controller/stick.svg")
-    no-repeat !important;
+  background-image:
+    url("https://nottrueblue.github.io/trueblue-controller/stick.svg") !important;
 
+  background-repeat: no-repeat !important;
+
+  /* cały sprite 286x94 */
   background-size: 286px 94px !important;
+
+  /* normalny analog = pierwszy segment */
   background-position: 0 0 !important;
 
   filter:
-    brightness(1.15)
-    contrast(1.12)
-    drop-shadow(0 0 5px rgba(0, 225, 255, 0.55))
-    drop-shadow(0 0 10px rgba(0, 110, 255, 0.30)) !important;
+    drop-shadow(0 0 4px rgba(0, 225, 255, 0.55))
+    drop-shadow(0 0 9px rgba(0, 110, 255, 0.28)) !important;
 }
 
-/* L3 */
+/* lewy analog po L3 */
 .controller.ds4 .stick.left.pressed {
   background-position: -96px 0 !important;
 
   filter:
-    brightness(1.25)
-    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
-    drop-shadow(0 0 14px rgba(0, 110, 255, 0.45)) !important;
+    drop-shadow(0 0 6px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 13px rgba(0, 110, 255, 0.45)) !important;
 }
 
-/* R3 */
+/* prawy analog po R3 */
 .controller.ds4 .stick.right.pressed {
   background-position: -192px 0 !important;
 
   filter:
-    brightness(1.25)
-    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
-    drop-shadow(0 0 14px rgba(0, 110, 255, 0.45)) !important;
+    drop-shadow(0 0 6px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 13px rgba(0, 110, 255, 0.45)) !important;
 }
 
 /* =========================
