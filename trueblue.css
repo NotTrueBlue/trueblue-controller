@@ -1,9 +1,53 @@
-.edit::after {
-  content: none !important;
+/* TRUEBLUE badge + safe neon base for GamePad Viewer Beta */
+
+:root {
+  --tb-badge-width: 180px;
+  --tb-badge-top: 72%;
 }
 
 .edit {
+  position: relative !important;
+  overflow: visible !important;
   filter:
-    drop-shadow(0 0 8px #00d9ff)
-    drop-shadow(0 0 18px #0077ff) !important;
+    drop-shadow(0 0 6px rgba(0, 217, 255, 0.55))
+    drop-shadow(0 0 16px rgba(0, 119, 255, 0.25)) !important;
+}
+
+.edit::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: var(--tb-badge-top) !important;
+  transform: translate(-50%, -50%) !important;
+
+  width: var(--tb-badge-width) !important;
+  aspect-ratio: 4 / 1 !important;
+
+  background-image:
+    url("https://nottrueblue.github.io/trueblue-controller/trueblue-badge.svg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+
+  pointer-events: none !important;
+  z-index: 9999 !important;
+
+  filter:
+    drop-shadow(0 0 4px rgba(0, 225, 255, 0.70))
+    drop-shadow(0 0 10px rgba(0, 119, 255, 0.35)) !important;
+}
+
+.edit .button.pressed,
+.edit .face.pressed,
+.edit .stick.pressed,
+.edit .trigger.pressed,
+.edit .bumper.pressed,
+.edit .touchpad.pressed,
+.edit .back.pressed,
+.edit .start.pressed,
+.edit .meta.pressed {
+  filter:
+    brightness(1.35)
+    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 14px rgba(0, 119, 255, 0.45)) !important;
 }
