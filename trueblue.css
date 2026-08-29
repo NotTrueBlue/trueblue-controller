@@ -1,19 +1,103 @@
-/* TRUEBLUE PS4 BASE - direct replacement */
+/* TRUEBLUE - PS4 custom base + lepsza widoczność inputów */
 
 .controller.ds4 {
   background:
     url("https://nottrueblue.github.io/trueblue-controller/base.svg")
     no-repeat center center !important;
-
   background-size: 806px 598px !important;
 
   width: 806px !important;
   height: 598px !important;
 }
 
-/* zachowujemy tylko lekki glow całego kontrolera */
+/* lekki glow całego pada */
 .controller.ds4.edit {
   filter:
     drop-shadow(0 0 5px rgba(0, 220, 255, 0.45))
     drop-shadow(0 0 12px rgba(0, 110, 255, 0.22)) !important;
+}
+
+/* =========================
+   ANALOGI - bardziej widoczne
+   ========================= */
+
+.controller.ds4 .stick {
+  filter:
+    brightness(1.45)
+    contrast(1.18)
+    saturate(1.15)
+    drop-shadow(0 0 6px rgba(0, 225, 255, 0.55))
+    drop-shadow(0 0 12px rgba(0, 110, 255, 0.28)) !important;
+}
+
+.controller.ds4 .stick.pressed {
+  filter:
+    brightness(1.65)
+    contrast(1.22)
+    saturate(1.2)
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.65))
+    drop-shadow(0 0 12px rgba(0, 225, 255, 0.85))
+    drop-shadow(0 0 18px rgba(0, 110, 255, 0.42)) !important;
+}
+
+/* =========================
+   FACE BUTTONS - bardziej czytelne
+   ========================= */
+
+.controller.ds4 .button {
+  filter:
+    brightness(1.22)
+    contrast(1.15)
+    saturate(1.18)
+    drop-shadow(0 0 4px rgba(0, 225, 255, 0.28)) !important;
+}
+
+.controller.ds4 .button.pressed {
+  filter:
+    brightness(1.55)
+    contrast(1.18)
+    saturate(1.25)
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.75))
+    drop-shadow(0 0 10px rgba(0, 225, 255, 0.9))
+    drop-shadow(0 0 16px rgba(0, 110, 255, 0.42)) !important;
+}
+
+/* =========================
+   DPAD - też trochę czytelniej
+   ========================= */
+
+.controller.ds4 .face {
+  filter:
+    brightness(1.14)
+    contrast(1.12)
+    drop-shadow(0 0 3px rgba(0, 225, 255, 0.22)) !important;
+}
+
+.controller.ds4 .face.pressed {
+  filter:
+    brightness(1.4)
+    contrast(1.18)
+    drop-shadow(0 0 7px rgba(0, 225, 255, 0.78))
+    drop-shadow(0 0 12px rgba(0, 110, 255, 0.35)) !important;
+}
+
+/* =========================
+   TRIGGERY / BUMPERY
+   ========================= */
+
+.controller.ds4 .trigger,
+.controller.ds4 .bumper {
+  filter:
+    brightness(1.12)
+    contrast(1.08)
+    drop-shadow(0 0 3px rgba(0, 225, 255, 0.18)) !important;
+}
+
+.controller.ds4 .trigger.pressed,
+.controller.ds4 .bumper.pressed {
+  filter:
+    brightness(1.35)
+    contrast(1.15)
+    drop-shadow(0 0 6px rgba(0, 225, 255, 0.75))
+    drop-shadow(0 0 10px rgba(0, 110, 255, 0.35)) !important;
 }
