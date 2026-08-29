@@ -1,33 +1,19 @@
-/* TRUEBLUE - PS4 custom base */
+/* TRUEBLUE PS4 BASE - direct replacement */
 
-.controller.ds4.edit,
-.ds4.edit,
-.edit.ds4 {
-  background-image: url("https://nottrueblue.github.io/trueblue-controller/base.svg") !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  background-position: center !important;
+.controller.ds4 {
+  background:
+    url("https://nottrueblue.github.io/trueblue-controller/base.svg")
+    no-repeat center center !important;
+
+  background-size: 806px 598px !important;
+
+  width: 806px !important;
+  height: 598px !important;
 }
 
-/* lekki glow całego pada */
-.edit {
+/* zachowujemy tylko lekki glow całego kontrolera */
+.controller.ds4.edit {
   filter:
-    drop-shadow(0 0 6px rgba(0, 217, 255, 0.5))
-    drop-shadow(0 0 14px rgba(0, 119, 255, 0.25)) !important;
-}
-
-/* glow przy wciśnięciu przycisków */
-.edit .button.pressed,
-.edit .face.pressed,
-.edit .stick.pressed,
-.edit .trigger.pressed,
-.edit .bumper.pressed,
-.edit .touchpad.pressed,
-.edit .back.pressed,
-.edit .start.pressed,
-.edit .meta.pressed {
-  filter:
-    brightness(1.35)
-    drop-shadow(0 0 7px rgba(0, 225, 255, 0.85))
-    drop-shadow(0 0 14px rgba(0, 119, 255, 0.45)) !important;
+    drop-shadow(0 0 5px rgba(0, 220, 255, 0.45))
+    drop-shadow(0 0 12px rgba(0, 110, 255, 0.22)) !important;
 }
