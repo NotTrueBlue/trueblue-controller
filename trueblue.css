@@ -1,42 +1,22 @@
-/* TRUEBLUE badge + safe neon base for GamePad Viewer Beta */
+/* TRUEBLUE - PS4 custom base */
 
-:root {
-  --tb-badge-width: 180px;
-  --tb-badge-top: 72%;
-}
-
-.edit {
-  position: relative !important;
-  overflow: visible !important;
-  filter:
-    drop-shadow(0 0 6px rgba(0, 217, 255, 0.55))
-    drop-shadow(0 0 16px rgba(0, 119, 255, 0.25)) !important;
-}
-
-.edit::after {
-  content: "" !important;
-  position: absolute !important;
-  left: 50% !important;
-  top: var(--tb-badge-top) !important;
-  transform: translate(-50%, -50%) !important;
-
-  width: var(--tb-badge-width) !important;
-  aspect-ratio: 4 / 1 !important;
-
-  background-image:
-    url("https://nottrueblue.github.io/trueblue-controller/trueblue-badge.svg") !important;
-  background-position: center !important;
+.controller.ds4.edit,
+.ds4.edit,
+.edit.ds4 {
+  background-image: url("https://nottrueblue.github.io/trueblue-controller/base.svg") !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
-
-  pointer-events: none !important;
-  z-index: 9999 !important;
-
-  filter:
-    drop-shadow(0 0 4px rgba(0, 225, 255, 0.70))
-    drop-shadow(0 0 10px rgba(0, 119, 255, 0.35)) !important;
+  background-position: center !important;
 }
 
+/* lekki glow całego pada */
+.edit {
+  filter:
+    drop-shadow(0 0 6px rgba(0, 217, 255, 0.5))
+    drop-shadow(0 0 14px rgba(0, 119, 255, 0.25)) !important;
+}
+
+/* glow przy wciśnięciu przycisków */
 .edit .button.pressed,
 .edit .face.pressed,
 .edit .stick.pressed,
